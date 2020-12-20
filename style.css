@@ -57,8 +57,6 @@ nav a:hover{
 .top_container {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 2fr 1fr;
     grid-template-areas:
     'showcase showcase top-box-a'
     'showcase showcase top-box-b';
@@ -92,7 +90,32 @@ nav a:hover{
 }
 .top-box-a{
     grid-area: top-box-a;
+    grid-column: auto;
 }
 .top-box-b{
     grid-area: top-box-b;
+    
+}
+.top-box .price{
+    font-size: 2rem;
+}
+.top-box{
+    background: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+.box {
+    background: var(--primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
 }
